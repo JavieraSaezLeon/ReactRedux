@@ -1,7 +1,7 @@
 export {
-  FETCH_POKEMON_LIST,
-  LOADING_POKEMON_LIST,
-  fetchPokemonList,
+  FETCH_ORDER_LIST,
+  LOADING_ORDER_LIST,
+  fetchOrderList,
 } from './actions'
 
 export default from './reducer'

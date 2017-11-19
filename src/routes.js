@@ -2,13 +2,11 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import App from './App'
-import { Container as PokemonList } from './modules/list'
-import { Container as PokemonCard } from './modules/card'
+import { Container as OrderList } from './modules/list'
 
 export default(
   <Route path="/" component={App}>
-    <IndexRoute component={PokemonList} />
-    <Route path="pokemons" component={PokemonList} />
-    <Route path="pokemon/:number" component={PokemonCard} />
+    <IndexRoute component={OrderList} />
+    <Route path="orders" component={OrderList} />
   </Route>
 )

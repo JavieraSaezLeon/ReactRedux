@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 
 class Row extends Component {
   render() {
     return (
       <tr>
-        <th scope="row">{this.props.pokemon.pokedexNumber}</th>
-        <td>
-          <Link to={`pokemon/${this.props.pokemon.pokedexNumber}`}>
-            {this.props.pokemon.name}
-          </Link>
-        </td>
+        <th scope="row">{this.props.order.number}</th>
+        <td>{this.props.order.name}</td>
+        <td>{this.props.order.originAddress}</td>
+        <td>{this.props.order.destinationAddress}</td>
+        <td>{this.props.order.weight}</td>
       </tr>
     )
   }
 }
 
 Row.propTypes = {
-  pokemon: React.PropTypes.shape({
-    pokedexNumber: React.PropTypes.string,
+  order: React.PropTypes.shape({
+    number: React.PropTypes.numeber,
     name: React.PropTypes.string,
+    originAddress: React.PropTypes.string,
+    destinationAddress: React.PropTypes.string,
+    weight: React.PropTypes.string,
   }),
 }
 

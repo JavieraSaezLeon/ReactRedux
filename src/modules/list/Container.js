@@ -1,19 +1,19 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { fetchPokemonList } from '../list'
+import { fetchOrderList } from '../list'
 
 import View from './View'
 
 function mapStateToProps(state) {
   return {
-    results: state.list.data.results,
+    orders: state.list.data,
     loading: state.list.loading,
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchPokemonList: bindActionCreators(fetchPokemonList, dispatch),
+    fetchOrderList: bindActionCreators(fetchOrderList, dispatch),
   }
 }
 

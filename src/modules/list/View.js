@@ -3,7 +3,7 @@ import Table from './Table'
 
 class View extends Component {
   componentDidMount() {
-    this.props.fetchPokemonList()
+    this.props.fetchOrderList()
   }
 
   buildContent() {
@@ -12,23 +12,20 @@ class View extends Component {
         <h2>Loading...</h2>
       )
     }
-
     return (
-      <Table data={this.props.results} />
+      <Table data={this.props.orders} />
     )
   }
 
   render() {
-    console.log(this.props.results)
-    console.log(this.props.loading)
     return this.buildContent()
   }
 }
 
 View.propTypes = {
-  results: React.PropTypes.arrayOf(React.PropTypes.object),
+  orders: React.PropTypes.arrayOf(React.PropTypes.object),
   loading: React.PropTypes.bool,
-  fetchPokemonList: React.PropTypes.func,
+  fetchOrderList: React.PropTypes.func,
 }
 
 export default View

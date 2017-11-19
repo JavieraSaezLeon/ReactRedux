@@ -1,15 +1,15 @@
 import {
-  FETCH_POKEMON_LIST,
+  FETCH_ORDER_LIST,
 } from './actions'
 
 const initialState = {
-  data: {},
+  data: '',
   loading: true,
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case FETCH_POKEMON_LIST:
+    case FETCH_ORDER_LIST:
       return { ...state, data: action.payload, loading: false }
     default:
       return state
